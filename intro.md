@@ -29,8 +29,7 @@
 - QCM de quelques minutes à chaque séance: note 1
 - Présentation rapide d'un concept du langage, 6 juillet, 10 minutes / personne -> note 2
 - Rendu d'un projet rust, testé, documenté en fin d'année -> note 3
-
-- Vos projets --> Github (ou altenative)
+  - Vos projets --> Github (ou altenative)
 
 ## Planning (prévisionnel) des séances
 
@@ -81,3 +80,4 @@ Long démo qui présentera les choses suivantes:
 - Macro
 - Durée de vie
 - Gestion d'erreur / Option / Error
+- Lambda
