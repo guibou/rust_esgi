@@ -26,8 +26,8 @@
 
 ## Notation
 
-- QCM de quelques minutes à chaque séance: note 1
-- Présentation rapide d'un concept du langage, 6 juillet, 10 minutes / personne -> note 2
+- QCM de quelques minutes à chaque séance: note 1 1/10
+- Présentation rapide d'un concept du langage, 13 juillet, 10 minutes / personne -> note 2 4/10
 - Rendu d'un projet rust, testé, documenté en fin d'année -> note 3
   - Vos projets --> Github (ou altenative)
 
@@ -44,8 +44,12 @@
 
 # Pourquoi rust?
 
+- Java/Python/C#
+
+- C++/C
+
 - Langage système
-- Memory safe
+- Memory/Everything safe
 - Belles abstractions gratuites
 - (Pour l'instant) peu d'historique
 - Performances
@@ -81,3 +85,8 @@ Long démo qui présentera les choses suivantes:
 - Durée de vie
 - Gestion d'erreur / Option / Error
 - Lambda
+
+# Elements de surprises
+
+- pas de 'return', les instructions sont renvoyé directemnt
+- "mut"
