@@ -4,7 +4,7 @@ Ces types sont fondamentaux dans tout programme et vous permettrons d'avoir une 
 
 Commencez par créer un projet rust pour ce TP :
 
-```
+```rust
 $ cargo new tp3
 ```
 
@@ -26,14 +26,14 @@ Par exemple `isbig("guillaume".to_string(), 10) == false`
 
 4. Appelez la fonction une fois sur votre string et observer le résultat avec `println!`, comme ceci:
 
-```
+```rust
     let name = "guillaume".to_string();
     println!("{}", isbig(name, 10));
 ```
 
 5. Appelez la fonction une seconde fois, comme ceci:
 
-```
+```rust
     let name = "guillaume".to_string();
     println!("{}", isbig(name, 10));
     println!("{}", isbig(name, 5));
@@ -59,7 +59,7 @@ On peut créer des valeurs avec `None` et `Some(x)`.
 
 On peut `matcher` dessus:
 
-```
+```rust
 let v = Some(10);
 
 match v {
@@ -86,7 +86,7 @@ https://doc.rust-lang.org/std/vec/struct.Vec.html
 
 On peut créer un vecteur avec `vec!`. Exemple:
 
-```
+```rust
 let v = vec![1,2,3,4];
 ```
 
@@ -99,7 +99,7 @@ Note: ne faites pas attention a cette syntaxe particulière ou au `!`, c'est une
 
 3. Un vecteur peut être modifié. Vous pouvez créer un vecteur `mut`able en ajoutant `mut` au `let`:
 
-```
+```rust
 let mut v2 = vec![3, 7];
 ```
 
@@ -111,7 +111,7 @@ Vous pourrez ensuite ajouter des valeurs manuellement dans le vecteur avec `v.pu
 
 6. Comme dans l'exercice sur les `String`, observez que vous ne pouvez pas appeler la fonction `somme` deux fois de suite, comme ceci:
 
-```
+```rust
 let mut v = vec![1,2];
 println!("{}", somme(v));
 v.push(3);
