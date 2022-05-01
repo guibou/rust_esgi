@@ -18,24 +18,24 @@
 
 29h
 
-- 4 mai - 14:00 -> 15:30
-- 25 mai - 8:00 -> 9:30
-- 8, 10 juin - 8:00 -> 9:30
-- 5, 6 juillet - 11:30 -> 13:00
-- 12, 13, 15, 16 juillet - 14:00 -> 19:00 (yeah!)
+- 2 mai - 8:00 -> 15:30
+- 3 mai - 8:00 -> 13:00
+- 4 mai - 8:00 -> 13:00
+- 5 mai - 9:45 -> 13:00
+- 6 mai - 9:45 -> 13:00 (remote)
+- 27 juin - 11:30 -> 13:00
+- 28 juin - 11:30 -> 13:00
+- 1 juillet - 9:45 -> 13:00
 
 ## Notation
 
-- QCM de quelques minutes à chaque séance: note 1 1/10
-- Présentation rapide d'un concept du langage, 13 juillet, 10 minutes / personne -> note 2 4/10
-- Rendu d'un projet rust, testé, documenté en fin d'année -> note 3
-  - Vos projets --> Github (ou altenative)
+- A discuter ensemble.
 
 ## Planning (prévisionnel) des séances
 
-- Intro / syntaxe / prise en main (1h30)
-- Interpreteur brainfuck (3h)
-- Serveur echo (1h30)
+- Intro / syntaxe / prise en main
+- Interpreteur brainfuck 
+- Serveur web (1h30)
 - web ? (3h)
 - Jeu vidéo (6h)
 - You name it...
@@ -75,10 +75,12 @@
 
 Long démo qui présentera les choses suivantes:
 
-- Fonctions
-- `if`, `while`, `mut`, ...
+- Types de base `i32`
+- Fonctions factorielle
+- `if`, `for`, `while`, `mut`, `fold`
 - Types (struct/enum)
 - Match
+
 - `impl` et `trait`
 - Deriving
 - Macro
@@ -88,5 +90,5 @@ Long démo qui présentera les choses suivantes:
 
 # Elements de surprises
 
-- pas de 'return', les instructions sont renvoyé directemnt
-- "mut"
+- pas de 'return', les instructions sont renvoyées directemnt
+- `mut`, `clone`, `copy` -> Laissez vous aider par le LSP / Compilateur. Dans le doute, `.clone()`.
