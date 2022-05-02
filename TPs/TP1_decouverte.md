@@ -22,7 +22,7 @@ Le fichier `Cargo.toml` décrit votre projet. Nous discuterons de celui-ci plus 
 
 Votre code est dans `src/main.rs`.
 
-Pensez à visionner votre code.
+Pensez à versionner votre code.
 
 ## Travail à fournir
 
