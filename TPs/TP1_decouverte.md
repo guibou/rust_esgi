@@ -62,7 +62,7 @@ Pour cela nous allons créer la `struct Livre` qui contient les champs suivants:
 
 Créez le type, puis créez plusieurs valeurs représentatives dans la fonction `main` (il faudra utiliser `to_string()`). Je vous encourage vivement à dériver `Debug` pour tous ces types.
 
-Créer ensuite une fonction, `age_livre`, celle-ci prend un livre en paramètre et retourne l'age de celui-ci (*i.e.* l'année en cours moins l'année de publication). Nous sommes en 2021.
+Créer ensuite une fonction, `age_livre`, celle-ci prend un livre en paramètre et retourne l'age de celui-ci (*i.e.* l'année en cours moins l'année de publication). Nous sommes en 2022.
 
 **Note:** Vous aurez sans doute un problème de `borrow` ici si vous faites plusieurs opérations sur le même livre. Utilisez `.clone()` sur vos livres.
 
