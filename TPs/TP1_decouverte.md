@@ -22,7 +22,7 @@ Le fichier `Cargo.toml` décrit votre projet. Nous discuterons de celui-ci plus 
 
 Votre code est dans `src/main.rs`.
 
-Pensez à visionner votre code.
+Pensez à versionner votre code.
 
 ## Travail à fournir
 
@@ -92,6 +92,8 @@ Tout cela multiplié par une valeur qui dépend de son genre:
 - `Informatique`: 41
 
 Ne vous formalisez pas trop sur l'équation. Le but est de vous faire écrire une fonction qui travail sur tous les champs du `Livre`. Vous devrez utiliser un `match` sur le champs `genre`.
+
+Note: vous aurez sans doute à convertir des `usize` en `u32`, utilisez `as` tel que `maValeur as u32`, nous discuterons de cela plus tard.
 
 # Enum avancé
 

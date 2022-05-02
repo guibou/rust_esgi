@@ -1,94 +1,117 @@
-/*
- * factorial(n) = n * (n - 1) * (n - 2) .... 1
- * factorial(0) = 1
- *
- * Cette implementation est recursive.
- */
-fn factorial(n: i32) -> i32 {
-    let res = if n == 1 {
+fn factorial(i: i32) -> i32 {
+    if i == 0 {
         1
     } else {
-        // Variable intermediaire, observez le 'let'
-        let n2 = n - 1;
+        i * factorial(i - 1)
+    }
+}
 
-        n * factorial(n2)
+fn factorial_while(mut i: i32) -> i32 {
+    let mut resultat = 1;
+
+    while i > 0 {
+        resultat *= i;
+        i = i - 1;
+    }
+
+    resultat
+}
+
+fn factorial_for(mut i: i32) -> i32 {
+    let mut resultat = 1;
+
+    for n in 1..(i + 1) {
+        resultat *= n;
+    }
+
+    resultat
+}
+
+fn toto(a: i32, b: i32) -> i32 {
+    a * b
+}
+
+fn factorial_rusttttt(i: i32) -> i32 {
+    (1..(i + 1)).product()
+}
+
+#[derive(Debug)]
+struct Point {
+    x: i32,
+    y: i32,
+    z: i32,
+}
+
+enum Color {
+    Red,
+    Green,
+    Blue,
+}
+
+enum ColorWeb {
+    NamedColor(Color),
+    HexColor(f32, f32, f32)
+}
+
+enum Ip {
+    Ipv4(u8, u8, u8, u8),
+    Upv6(u8)
+}
+#[derive(Debug)]
+struct Rectangle{
+    width: f32,
+    height: f32
+}
+
+#[derive(Debug)]
+enum Shape {
+    RectangleShape(Rectangle),
+    Circle { radius: f32},
+    Square { side: f32 }
+}
+
+fn shape_area(s : Shape) -> f32
+{
+    match s
+    {
+        Shape::RectangleShape (Rectangle { width:w, height:h }) => w * h,
+        Shape::Square { side } => side * side,
+        Shape::Circle { radius } => 3.14 * radius * radius
+    }
+}
+
+fn color_to_string(c: Color) -> () {
+    let s = match c {
+        Color::Red => "Red",
+        Color::Green => "Vert",
+        Color::Blue => "Jurassica park",
     };
 
-    res
+    println!("{}", s)
 }
 
-// Implementation non récursive, avec `mut` pour les mutations
-fn factorial2(mut n: i32) -> i32 {
-    let mut res = 1;
-
-    while n > 1
-    {
-        res *= n;
-        n -= 1;
-    }
-
-    res
-}
-
-// Création d'un type Eleve, ayant deux champs.
-// derive permet de generer automatiquement des comportements:
-//
-// Debug: println!("{:?}", monObject) => Affichage
-// PartialEq: == et !=
-// Eq: == et != pour toutes les valeurs
-// Clone: .clone(): permet de dupliquer l'objet
-#[derive(Debug, PartialEq, Eq, Clone)]
-struct Eleve
-{
-    prenom: String,
-    age: i32,
-}
-
-// cette fonction prend un Eleve par réference entrée
-fn calcul_date_naissance(e : &Eleve) -> i32
-{
-    2021 - e.age
-}
-
-// Creation d'un type Couleur, avec 3 cas simples
-enum Couleur
-{
-    Rouge, Vert, Bleu
-}
-
-// Creation d'un type Géometry, avec 2 cas. Observez que les cas peuvent être élaborés
-enum Geometry
-{
-    Square(f32),
-    Rectangle(f32, f32)
-}
-
-// Cette fonction travaille sur Geometry
-fn geometry_coucou(toto: Geometry)
-{
-    // match permet de gerer les N cas.
-    // Attention, un "match" doit être "total".
-    match toto {
-        Geometry::Square(i) => println!("C'était un carré de cote {}", i),
-        Geometry::Rectangle(i, j) => println!("C'était un rectangle de cotés {} {}", i, j)
-    }
+fn distance2(p0: Point, p1: Point) -> i32 {
+    let dx = p0.x - p1.x;
+    let dy = p0.y - p1.y;
+    let dz = p0.z - p1.z;
+    dx * dx + dy * dy + dz * dz
 }
 
 fn main() {
-    // Boucle for. La valeur de _i est ignorée.
-    for _i in 1..10 {
-        println!("Hello, world!")
+    println!("Hello, world!");
+    for i in 1..10 {
+        println!("fact({i}): {}", factorial(i));
+        println!("fact({i}): {}", factorial_rusttttt(i));
     }
 
-    // Attention, "fooo" n'est pas une string, il faut utiliser "to_string()".
-    let guillaume = Eleve { prenom: "guillaume".to_string(), age: 34};
+    let p = Point { x: 1, y: 2, z: 3 };
+    let p2 = Point { x: 5, y: 2, z: 3 };
+    println!("Mon point est: {p:?}");
+    println!("Ma distance est {}", distance2(p, p2));
 
-    println!("Guillaume, tu es né en {}", calcul_date_naissance(&guillaume));
+    let c = Color::Red;
 
-    let ma_couleur_preferee = Couleur::Rouge;
-
-    let bob = Geometry::Square(10.0);
-    let toto = Geometry::Rectangle(20.0, 3.0);
-
-    println!("{:?}", guillaume);
+    let s0 = Shape::RectangleShape(Rectangle { width: 2.0, height: 3.0 });
+    let s1 = Shape::Square { side: 10.0 };
+    let s2 = Shape::Circle { radius: 2.5 };
 }
