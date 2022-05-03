@@ -20,7 +20,7 @@ Dans ce TP (sur plusieurs séances), nous réaliserons un interpréteur Brainfuc
 Crée un type `enum Instruction` représentant les différentes instructions possibles. Par exemple, le code suivant:
 
 ```rust
-let code = vec![Plus, Plus, Moins, Moins, Droite, Gauche, Affiche];
+let code = vec![Instruction::Plus, Instruction::Plus, Instruction::Moins, Instruction::Moins, Instruction::Droite, Instruction::Gauche, Instruction::Affiche];
 ```
 
 Représente le programme brainfuck suivant: `++--><.`.
@@ -32,7 +32,7 @@ Ignorez les instructions de boucle pour l'instant (i.e. `[` et `]`).
 Notre interpréteur travaille sur une mémoire type `Vec<i32>`. Votre fonction d'interprétation aura la signature suivante:
 
 ```rust
-fn interpreteur(memoire: &mut vec<i32>, instructions: &vec<Instruction>)
+fn interpreteur(memoire: &mut Vec<i32>, instructions: &Vec<Instruction>)
 ```
 
 Commencez par une fonction qui traite seulement les instructions `+-<>`. On rappel que:
@@ -40,7 +40,7 @@ Commencez par une fonction qui traite seulement les instructions `+-<>`. On rapp
 - `+` va incrémenter la case mémoire en cours
 - `-` va décrémenter la case mémoire en cours
 - `<` décale la case mémoire en cours vers la gauche
-- `<` décale la case mémoire en cours vers la droite.
+- `>` décale la case mémoire en cours vers la droite.
 
 Notes:
 
@@ -64,11 +64,11 @@ Devrait retourner le contenu du vecteur `mem` comme étant `vec![3, 1, -1]`.
 
 Vous utiliserez surement:
 
-- le `for`, ou un `while`, pour parcourir toutes les instructions
+- un `for`, ou un `while`, pour parcourir toutes les instructions.
 - un `match`, pour tester chaque instruction.
 - une valeur `mut`able, pour stocker la case mémoire en cours.
 
-Que se passes t il si on passe une mémoire "vide" au départ, qui ne contient
+Que se passes-t-il si on passe une mémoire "vide" au départ, qui ne contient
 pas de cases ? Dans ce TP, on supposera que la mémoire est "infinie" a droite
 et que chaque case contient un 0 par défaut.
 
@@ -93,7 +93,7 @@ let instructions = vec![Affiche, Droite, Affiche, Droite, Affiche, Droite, Affic
 interpreteur(&mem, &instructions);
 ```
 
-Que fait ce programme (sans l'exécuter). Fait il bien cela (en l'exécutant).
+Que fait ce programme (sans l'exécuter). Fait-il bien cela (en l'exécutant).
 
 Et maintenant:
 
