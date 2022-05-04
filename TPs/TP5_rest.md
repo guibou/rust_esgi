@@ -33,7 +33,7 @@ la suite.
 # Premiers "endpoints" simples
 
 - Ecrivez un ponit d'entrée `/fact/compute` qui récupère un entier en entrée (en `POST` json) et retourne la factorielle de cet entier dans la réponse.
-- Écrivez un point d'entrée `/fact/compute2/:n` qui récupère l'entier en entrée en `GET`. Vous trouverez un exemple pour l'extraction des arguments dans le fichier `fib.hs` du répertoire d'exemple.
+- Écrivez un point d'entrée `/fact/compute2/:n` qui récupère l'entier en entrée en `GET`. Vous trouverez un exemple pour l'extraction des arguments dans le fichier `fib.rs` du répertoire d'exemple.
 
 # Point d'entrée plus complexes
 
