@@ -148,7 +148,7 @@ let instructions = parse("+-<>.,".to_string())
 println("{:?}", instructions);
 ```
 
-Devrait afficher `vec![Plus, Moins, Gauche, Droite, Affiche, Lis]`.
+Devrait afficher `Ok([Plus, Moins, Gauche, Droite, Affiche, Lis])`.
 
 La gestion des boucles est plus difficile, bonne chance ;)
 
