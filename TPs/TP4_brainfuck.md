@@ -52,9 +52,9 @@ Ainsi, le code suivant:
 ```rust
 fn main()
 {
-   let mem = vec![0, 0, 0];
+   let mut mem = vec![0, 0, 0];
    let instructions = vec![Plus, Plus, Plus, Droite, Plus, Droite, Moins];
-   interpreteur(&mem, &instructions);
+   interpreteur(&mut mem, &instructions);
 
    println!("{:?}", mem);
 }
@@ -87,10 +87,10 @@ Vous pourrez utiliser:
 Essayez maintenant:
 
 ```rust
-let mem = vec![72, 101, 108, 108, 111];
+let mut mem = vec![72, 101, 108, 108, 111];
 let instructions = vec![Affiche, Droite, Affiche, Droite, Affiche, Droite, Affiche, Droite, Affiche];
 
-interpreteur(&mem, &instructions);
+interpreteur(&mut mem, &instructions);
 ```
 
 Que fait ce programme (sans l'exécuter). Fait-il bien cela (en l'exécutant).
@@ -98,10 +98,10 @@ Que fait ce programme (sans l'exécuter). Fait-il bien cela (en l'exécutant).
 Et maintenant:
 
 ```rust
-let mem = vec![72, 101, 108, 108, 111];
+let mut mem = vec![72, 101, 108, 108, 111];
 let instructions = vec![Lis, Plus, Affiche, Lis, Plus, Affiche, Lis, Plus, Lis, Plus, Affiche];
 
-interpreteur(&mem, &instructions);
+interpreteur(&mut mem, &instructions);
 ```
 
 ? Il vous faudra entrer des caractères au clavier.
@@ -117,10 +117,10 @@ Je vous laisse discuter ensemble de l'implémentation. Il existe plusieurs solut
 Une fois les boucles implémentée, on peut exécuter des programmes plus conséquents, comme une addition. Par exemple:
 
 ```rust
-let mem = vec![10, 15];
+let mut mem = vec![10, 15];
 let instructions = vec![Boucle(vec![Moins, Droite, Plus, Gauche])];
 
-interpreteur(&mem, &instructions);
+interpreteur(&mut mem, &instructions);
 
 println!("{:?}", mem);
 ```
