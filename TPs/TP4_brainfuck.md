@@ -145,7 +145,7 @@ Commencez par gérer les cas simple, en utilisant une boucle `for` et un `match`
 
 ```
 let instructions = parse("+-<>.,".to_string())
-println("{:?}", instructions);
+println!("{:?}", instructions);
 ```
 
 Devrait afficher `vec![Plus, Moins, Gauche, Droite, Affiche, Lis]`.
