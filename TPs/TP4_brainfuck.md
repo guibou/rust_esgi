@@ -112,6 +112,8 @@ C'est bien tout cela, mais on doit pouvoir faire mieux. Il manque l'instruction 
 
 L'idée est de représenter une "boucle" par un sous vecteur.
 
+La "boucle" représente un While qui s'exécute tant que la condition n'est pas égale à 0.
+
 Je vous laisse discuter ensemble de l'implémentation. Il existe plusieurs solutions. Je recommande de traiter le contenu de la `Boucle` comme un sous-programme, en appelant récursivement `interpreteur`. Mais vous aurez sans doute à passer la position actuelle de la mémoire en argument.
 
 Une fois les boucles implémentée, on peut exécuter des programmes plus conséquents, comme une addition. Par exemple:
@@ -125,6 +127,7 @@ interpreteur(&mut mem, &instructions);
 println!("{:?}", mem);
 ```
 
+Dans notre cas, considérons `let mut mem = vec![x, y];`. La Boucle va décrémenter la valeur `x` et incrémenter la valeur `y` tant que `x` n'est pas égal à 0.
 Devrait afficher `vec![0, 25]`.
 
 # Parsing
