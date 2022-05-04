@@ -24,7 +24,7 @@ Ce sujet de TP est un sujet interactif. Des diagrammes seront rajoutés pendant 
 
 ```
 let c = 10
-let b = &c;
+let mut b = &c;
 {
   let a = 10;
   if(...)
@@ -134,7 +134,7 @@ struct Animal
 ```
 
 Tous les types primitifs "simples" sont copiables.
-Tout type composé de type copyable est copyable.
+Tout type composé de type copyable permet de faire un Derive(Copy).
 
 `Copy` c'est simple. Mais:
 
