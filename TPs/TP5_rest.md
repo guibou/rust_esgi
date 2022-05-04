@@ -1,7 +1,7 @@
 # REST
 
 Nous allons implémenter un petit serveur qui répond à des requêtes REST. En fin
-de TP nous implementerons un petit algorithm pour trouver des acronymes
+de TP nous implementerons un petit algorithme pour trouver des acronymes
 efficacement, qui vous fera manipuler une structure classique de la
 programmation, les `HashMap`.
 
