@@ -37,7 +37,7 @@ la suite.
 
 # Point d'entrée plus complexes
 
-- Écriez un point d'entrée `/acronyms/` qui accepte en entrée un JSON du type:
+- Écrivez un point d'entrée `/acronyms/` qui accepte en entrée un JSON du type:
 
 ```
 ["chien", "tortue"]
