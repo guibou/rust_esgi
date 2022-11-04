@@ -1,4 +1,4 @@
-# Rust
+# Rust 2022-2023
 
 - guillaum.bouchard@gmail.com
 
@@ -14,18 +14,9 @@
 - Mode "projet"
 - Interagissez !
 
-## Seances
+## Séances
 
-29h
-
-- 2 mai - 8:00 -> 15:30
-- 3 mai - 8:00 -> 13:00
-- 4 mai - 8:00 -> 13:00
-- 5 mai - 9:45 -> 13:00
-- 6 mai - 9:45 -> 13:00 (remote)
-- 27 juin - 11:30 -> 13:00
-- 28 juin - 11:30 -> 13:00
-- 1 juillet - 9:45 -> 13:00
+27h
 
 ## Notation
 
@@ -36,8 +27,8 @@
 - Intro / syntaxe / prise en main
 - Interpreteur brainfuck 
 - Serveur web (1h30)
-- web ? (3h)
-- Jeu vidéo (6h)
+- Command line CLI
+- Jeu vidéo
 - You name it...
 
 # Rust intro
@@ -62,7 +53,7 @@
 - https://github.com/guibou/rust_esgi/
 - https://doc.rust-lang.org/
 
-# Cargo (devoir maison)
+# Cargo
 
 - https://www.rust-lang.org/tools/install
 
